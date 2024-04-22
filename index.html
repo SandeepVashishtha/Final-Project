@@ -49,6 +49,13 @@
             var num1 = parseInt(document.getElementById('num1').value);
             var num2 = parseInt(document.getElementById('num2').value);
             var sum = num1 + num2;
+
+            if (sum >= wordsArray.length) {
+                console.log("Aukat se bahar hai bhai");
+                document.getElementById('result').innerText = "Aukat se bahar hai bhai";
+                return false;
+            }
+
             var choices = wordsArray[sum];
             var words = choices[Math.floor(Math.random() * choices.length)];
             document.getElementById('result').innerText = words;
